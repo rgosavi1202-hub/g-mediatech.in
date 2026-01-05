@@ -1,32 +1,189 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>G-Mediatech | Digital Media & Political Communication</title>
+
+  <!-- CSS Styles -->
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #f4f4f9; /* Light background */
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    /* Header / Banner */
+    header {
+      background: linear-gradient(90deg, #0066cc, #00ccff); /* Gradient banner */
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      letter-spacing: 1px;
+    }
+
+    header h2 {
+      margin: 10px 0 0 0;
+      font-weight: 400;
+      font-size: 1.2em;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background-color: #333;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #00ccff; /* Hover color */
+    }
+
+    /* Main Content */
+    main {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+
+    h3 {
+      color: #0066cc; /* Section headings color */
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    hr {
+      border: none;
+      border-top: 2px solid #00ccff;
+      margin: 30px 0;
+    }
+
+    /* Politician Cards */
+    .politician-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .politician-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 250px;
+      text-align: center;
+      padding: 15px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .politician-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    }
+
+    .politician-card img {
+      width: 100%;
+      max-width: 150px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #333;
+      color: white;
+      margin-top: 40px;
+    }
+
+    /* Responsive for Mobile */
+    @media(max-width:600px){
+      .politician-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>G-Mediatech</h1>
-  <h2>Digital Media and Political Communication Services</h2>
 
-  <p>
-    G-Mediatech is a digital media and political communication agency
-    based in Pune, Maharashtra, India. We provide social media
-    management, digital advertising, and political communication services.
-  </p>
+  <!-- Header Banner -->
+  <header>
+    <h1>G-Mediatech</h1>
+    <h2>Digital Media & Political Communication</h2>
+  </header>
 
-  <p>
-    We create, manage, and publish online advertisements including
-    political and social issue ads on platforms such as Facebook and Instagram.
-  </p>
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms.html">Terms</a>
+  </nav>
 
-  <hr>
+  <!-- Main Content -->
+  <main>
+    <p>
+      G-Mediatech is a digital media and political communication agency
+      based in Pune, Maharashtra. We provide social media management, digital
+      advertising, and political communication services.
+    </p>
 
-  <a href="about.html">About Us</a> |
-  <a href="contact.html">Contact</a> |
-  <a href="privacy-policy.html">Privacy Policy</a> |
-  <a href="terms.html">Terms</a>
+    <p>
+      We create, manage, and publish online advertisements including
+      political and social issue ads on platforms such as Facebook and Instagram.
+    </p>
 
+    <hr>
+
+    <h3>Featured Politicians</h3>
+    <div class="politician-container">
+      <!-- Politician 1 -->
+      <div class="politician-card">
+        <img src="images/politician1.jpg" alt="Politician 1">
+        <h4>John Doe</h4>
+        <p>Constituency: Pune Central</p>
+        <p>Member of XYZ Party. Focused on social development and education campaigns.</p>
+      </div>
+
+      <!-- Politician 2 -->
+      <div class="politician-card">
+        <img src="images/politician2.jpg" alt="Politician 2">
+        <h4>Jane Smith</h4>
+        <p>Constituency: Pune West</p>
+        <p>Leader in environmental initiatives and community development programs.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
   <footer>
     <p>© 2026 G-Mediatech. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
