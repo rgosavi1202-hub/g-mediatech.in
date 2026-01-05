@@ -6,97 +6,126 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f2f4f8;
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f4f6f9;
+  color:#222;
+}
+header{
+  background:linear-gradient(90deg,#0a2540,#003f7f);
+  color:#fff;
+  padding:50px 20px;
+  text-align:center;
+}
+header h1{
+  font-size:42px;
+  margin:0;
+  letter-spacing:1px;
+}
+header h2{
+  font-size:20px;
+  margin-top:10px;
+  font-weight:400;
 }
 
-header {
-  background: #0a2540;
-  color: #fff;
-  padding: 50px 20px;
-  text-align: center;
+nav{
+  background:#ffffff;
+  padding:15px;
+  text-align:center;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+nav a{
+  margin:0 18px;
+  font-weight:800;
+  color:#0a2540;
+  text-decoration:none;
+}
+nav a:hover{
+  color:#003f7f;
 }
 
-header h1 {
-  font-size: 44px;
-  font-weight: 900;
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:50px 20px;
 }
 
-header h2 {
-  font-size: 18px;
-  opacity: 0.9;
+.section{
+  background:#fff;
+  padding:35px;
+  border-radius:12px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+  margin-bottom:40px;
 }
 
-nav {
-  background: #fff;
-  text-align: center;
-  padding: 15px;
+.section h3{
+  color:#0a2540;
+  font-size:30px;
+  margin-bottom:15px;
 }
 
-nav a {
-  margin: 0 15px;
-  font-weight: 700;
-  text-decoration: none;
-  color: #0a2540;
+.section p{
+  font-size:17px;
+  line-height:1.9;
 }
 
-.container {
-  max-width: 1000px;
-  margin: auto;
-  padding: 50px 20px;
+.highlight{
+  font-weight:800;
+  color:#0a2540;
 }
 
-.section-title {
-  text-align: center;
-  font-size: 32px;
-  font-weight: 800;
-  margin-bottom: 30px;
-  color: #0a2540;
+.features{
+  margin-top:20px;
+}
+.features p{
+  font-weight:700;
 }
 
-/* CARD */
-.card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  padding: 25px;
-  display: flex;
-  gap: 25px;
-  align-items: center;
-  cursor: pointer;
-  transition: 0.3s;
+.politician-container{
+  display:flex;
+  justify-content:center;
+  margin-top:20px;
 }
 
-.card:hover {
-  transform: translateY(-5px);
+.card{
+  width:280px;
+  background:#fff;
+  border-radius:15px;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+  text-align:center;
+  transition:transform 0.3s;
+}
+.card:hover{
+  transform:translateY(-6px);
+}
+.card img{
+  width:100%;
+  height:280px;
+  object-fit:cover;
+}
+.card h4{
+  color:#0a2540;
+  margin:15px 0 5px;
+  font-size:22px;
+}
+.card p{
+  margin:5px 0;
+  font-size:15px;
 }
 
-.card img {
-  width: 180px;
-  border-radius: 10px;
-  border: 3px solid #0a2540;
+.card a{
+  text-decoration:none;
+  color:inherit;
 }
 
-.card h3 {
-  font-size: 26px;
-  margin-bottom: 10px;
-  color: #0a2540;
-}
-
-.point {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 6px;
-}
-
-footer {
-  background: #000;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-  margin-top: 60px;
+footer{
+  background:#000;
+  color:#fff;
+  text-align:center;
+  padding:25px;
+  margin-top:60px;
 }
 </style>
 </head>
@@ -110,26 +139,64 @@ footer {
 
 <nav>
   <a href="index.html">Home</a>
-  <a href="about.html">About</a>
+  <a href="about.html">About Us</a>
   <a href="contact.html">Contact</a>
+  <a href="privacy-policy.html">Privacy Policy</a>
+  <a href="terms.html">Terms</a>
 </nav>
 
 <div class="container">
-  <h2 class="section-title">Featured Political Client</h2>
 
-  <!-- CLICKABLE CARD -->
-  <a href="jevan-chakankar.html" style="text-decoration:none;color:inherit;">
-    <div class="card">
-      <img src="images/jevan-chakankar.png" alt="Jevan Chakankar">
+  <!-- ABOUT AGENCY ON HOME PAGE -->
+  <div class="section">
+    <h3>About G-Mediatech</h3>
 
-      <div>
-        <h3>Jevan Chakankar</h3>
-        <div class="point">Party: Indian National Congress</div>
-        <div class="point">Position: Vice President, OBC Department</div>
-        <div class="point">Location: Pune City</div>
+    <p>
+      <span class="highlight">G-Mediatech</span> is a Pune-based
+      <span class="highlight">Digital Media & Political Communication Agency</span>
+      providing professional solutions for political leaders, parties, and social organizations.
+    </p>
+
+    <p>
+      We specialize in <b>social media management, political advertising,
+      digital branding, and voter-centric communication strategies</b>
+      that help leaders build trust and connect with citizens effectively.
+    </p>
+
+    <p>
+      Our team creates, manages, and publishes
+      <span class="highlight">political & social issue advertisements</span>
+      on platforms such as <b>Facebook and Instagram (Meta)</b>,
+      following strict compliance and ethical standards.
+    </p>
+
+    <div class="features">
+      <p>✔ Political Campaign Strategy & Execution</p>
+      <p>✔ Meta Ads (Facebook & Instagram)</p>
+      <p>✔ Image Building & Digital Reputation</p>
+    </div>
+  </div>
+
+  <!-- FEATURED POLITICIAN -->
+  <div class="section">
+    <h3 style="text-align:center;">Featured Politician</h3>
+
+    <div class="politician-container">
+      <div class="card">
+        <a href="jevan-chakankar.html">
+          <img src="images/jevan-chakankar.jpg" alt="Jevan Chakankar">
+          <h4>Jevan Chakankar</h4>
+          <p><b>Indian National Congress</b></p>
+          <p>OBC Department</p>
+        </a>
       </div>
     </div>
-  </a>
+
+    <p style="text-align:center; margin-top:20px; font-weight:700;">
+      Dedicated to community development, youth engagement,
+      and social welfare initiatives.
+    </p>
+  </div>
 
 </div>
 
